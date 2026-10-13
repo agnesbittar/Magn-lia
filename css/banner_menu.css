@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.Menu {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 16px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    opacity: 0.6;
+}
+
+.banner_conteiner {
+    width: 100%;
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    .Menu {
+        padding: 12px 10px;
+    }
+
+    .menu ul {
+        gap: 16px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+    .banner_conteiner{
+        height: 60vh;
+        min-height: 180px;    
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1065px) {
+    .banner_conteiner {
+        height: 35vh;
+    }
+}
+
+@media (min-width: 1066px) {
+    .banner_conteiner {
+        height: 45vh;
+    }
+}
