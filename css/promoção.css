@@ -1,0 +1,86 @@
+.promocao {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 20px;
+}
+
+/* caixa rosada com bordas arredondadas, em grid de 2 colunas */
+.promocao_caixa {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 32px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #fbeaf2;
+    overflow: hidden;
+}
+
+.promocao_titulo {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2f3354;
+}
+
+.promocao_destaque {
+    margin: 0 0 12px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #e0679f;
+}
+
+.promocao_descricao {
+    margin: 0 0 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2f3354;
+}
+
+.promocao_botao {
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 24px;
+    background-color: #e0679f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.promocao_botao:hover,
+.promocao_botao:focus-visible {
+    background-color: #2f3354;
+    transform: translateY(-2px);
+}
+
+.promocao_imagem {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* celular: empilha, imagem em cima */
+@media (max-width: 700px) {
+    .promocao_caixa {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .promocao_imagem {
+        order: -1;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .promocao_titulo {
+        font-size: 24px;
+    }
+
+    .promocao_destaque {
+        font-size: 34px;
+    }
+}

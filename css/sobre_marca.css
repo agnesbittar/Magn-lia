@@ -1,0 +1,90 @@
+.sobre_marca {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 20px;
+}
+
+.sobre_marca__titulo {
+    margin: 0 0 32px;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    color: #2f3354;
+}
+
+/* duas colunas: foto à esquerda, texto à direita */
+.sobre_marca__grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre_marca__foto {
+    margin: 0;
+}
+
+.sobre_marca__foto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 22px rgba(47, 51, 84, 0.15);
+}
+
+.sobre_marca__foto figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    color: #6b6e88;
+}
+
+.sobre_marca__titulo2 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2f3354;
+}
+
+.sobre_marca__subtitulo {
+    margin: 24px 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #e0679f;
+}
+
+.sobre_marca__historia,
+.sobre_marca__objetivo {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2f3354;
+}
+
+/* lista com marcador rosa */
+.sobre_marca__valores {
+    margin: 16px 0 24px;
+    padding: 16px 20px 16px 36px;
+    border-radius: 14px;
+    background-color: #fbeaf2;
+    line-height: 1.5;
+    color: #2f3354;
+}
+
+.sobre_marca__valores li::marker {
+    color: #e0679f;
+}
+
+/* tablet e celular: empilha (foto em cima) */
+@media (max-width: 760px) {
+    .sobre_marca__grade {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .sobre_marca {
+        padding: 32px 14px;
+    }
+}

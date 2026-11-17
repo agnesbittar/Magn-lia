@@ -1,0 +1,90 @@
+.rodape {
+    width: 100%;
+    margin-top: 60px;
+    padding: 48px 20px 20px;
+    background-color: #2f3354; /* azul-marinho da marca */
+    color: #fff;
+}
+/* grade: a primeira coluna é maior */
+.rodape__grade {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rodape__logo {
+    display: block;
+    width: 8em;
+    height: 2.5em;
+    margin-bottom: 12px;
+    background: url("../imagem/logo_branca.svg") no-repeat left center / contain;
+}
+
+.rodape__marca p {
+    margin: 0;
+    max-width: 30ch;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.85;
+}
+
+.rodape__coluna h3 {
+    margin: 0 0 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f4a9c9; /* rosa claro */
+}
+
+.rodape__coluna ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rodape__coluna li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.rodape a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.rodape a:hover,
+.rodape a:focus-visible {
+    color: #e0679f;
+    text-decoration: underline;
+}
+
+.rodape__copy {
+    max-width: 1000px;
+    margin: 32px auto 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+/* tablet: 2 colunas */
+@media (max-width: 800px) {
+    .rodape__grade {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rodape__marca {
+        grid-column: 1 / -1; /* marca ocupa a linha toda */
+    }
+}
+
+/* celular: 1 coluna */
+@media (max-width: 480px) {
+    .rodape__grade {
+        grid-template-columns: 1fr;
+    }
+}

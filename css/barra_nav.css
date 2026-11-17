@@ -1,0 +1,66 @@
+.barra_nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.barra_nav__titulo {
+    margin: 0 0 32px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2f3354;
+}
+
+.barra_nav__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 32px 24px;
+    justify-items: center;
+}
+
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+}
+
+/* círculo: a imagem preenche tudo, sem margem */
+.categoria__circulo {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    border: 3px solid transparent;
+    padding: 0;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.categoria__circulo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.categoria__nome {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.categoria:hover .categoria__circulo,
+.categoria:focus-visible .categoria__circulo {
+    border-color: #e0679f;
+    transform: translateY(-4px);
+}

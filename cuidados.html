@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuidados com a pele | Magnólia</title>
+  <link rel="icon" href="imagem/icon.png">
+  <!-- Fontes externas: Montserrat (texto) e Playfair Display (destaques) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=block">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,600i&display=block">
+  <link rel="stylesheet" href="css/banner_menu.css">
+  <link rel="stylesheet" href="css/dropdown.css">
+  <link rel="stylesheet" href="css/rodape.css">
+  <link rel="stylesheet" href="css/cuidados.css">
+</head>
+
+<body>
+  <header class="Menu">
+    <nav class="menu">
+      <a href="index.html" class="logo" role="img" aria-label="Magnólia"></a>
+      <ul class="links" id="menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="index.html#sobre-a-marca">Sobre nós</a></li>
+
+        <!-- Item com dropdown: o submenu leva às seções desta página -->
+        <li class="dropdown">
+          <a href="cuidados.html" class="ativo" aria-current="page">Cuidados <span class="seta" aria-hidden="true">▾</span></a>
+          <ul class="dropdown__menu">
+            <li><a href="#rotina">Rotina de pele</a></li>
+            <li><a href="#passos">3 passos básicos</a></li>
+            <li><a href="#tipos-de-pele">Tipos de pele</a></li>
+            <li><a href="#video">Vídeo</a></li>
+            <li><a href="#dica-do-dia">Dica do dia</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="perfil.html" class="perfil" role="img" aria-label="Conta"></a>
+
+      <button type="button" class="hamburguer" id="botao-menu"
+        aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Conteúdo centralizado, com bordas verticais no computador -->
+  <main class="conteudo">
+
+    <!-- Título principal da página (h1) -->
+    <section class="cabecalho_pagina">
+      <h1>Cuidados com a pele</h1>
+      <p class="p_destaque">Beleza que começa no cuidado.</p>
+    </section>
+
+    <!-- Rotina de pele: usa toda a escada de títulos (h2 a h6) e a propriedade float -->
+    <section class="secao" id="rotina" aria-labelledby="titulo-rotina">
+      <h2 id="titulo-rotina">Rotina de pele</h2>
+
+
+      <figure class="figura_flutuante">
+        <img src="imagem/produtos/serum.png" alt="Sérum facial Magnólia">
+        <figcaption>Sérum Facial Magnólia</figcaption>
+      </figure>
+
+      <p class="p_justificado">
+        Cuidar da pele não precisa ser complicado. Para começar, basta <strong>limpar, hidratar e proteger</strong>,
+        sempre de acordo com o seu tipo de pele. Quando o básico estiver
+        <em>consolidado</em>, dá para incluir sérum e outros tratamentos.
+      </p>
+
+      <h3>Rotina da manhã</h3>
+      <p class="p_justificado">Na manhã, o objetivo é preparar e proteger a pele para o dia.</p>
+
+      <h4>Passo a passo</h4>
+      <!-- Lista ordenada -->
+      <ol class="lista_passos">
+        <li>Lave o rosto com um gel de limpeza suave.</li>
+        <li>Aplique o sérum com a pele ainda levemente úmida.</li>
+        <li>Finalize com hidratante e protetor solar.</li>
+      </ol>
+
+      <h5>Passo 1: limpeza</h5>
+      <p class="p_justificado">Use água morna, nunca muito quente, e seque com toques leves na toalha.</p>
+
+      <h6>Observação importante</h6>
+      <p class="p_nota">O protetor solar é a etapa mais importante, com FPS mínimo de 30.</p>
+    </section>
+
+    <!-- Gráfico em SVG inline -->
+    <section class="secao" id="passos" aria-labelledby="titulo-passos">
+      <h2 id="titulo-passos">Os 3 passos básicos</h2>
+
+      <svg class="grafico_passos" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg"
+        role="img" aria-labelledby="svg-titulo svg-desc">
+        <title id="svg-titulo">Rotina em 3 passos</title>
+        <desc id="svg-desc">Três círculos ligados por uma linha: 1 limpar, 2 hidratar, 3 proteger.</desc>
+
+        <!-- linha que liga os círculos -->
+        <line x1="100" y1="80" x2="500" y2="80" class="svg_linha"/>
+
+        <!-- passo 1 -->
+        <circle cx="100" cy="80" r="48" class="svg_c1"/>
+        <text x="100" y="92" class="svg_numero">1</text>
+        <text x="100" y="165" class="svg_rotulo">Limpar</text>
+
+        <!-- passo 2 -->
+        <circle cx="300" cy="80" r="48" class="svg_c2"/>
+        <text x="300" y="92" class="svg_numero">2</text>
+        <text x="300" y="165" class="svg_rotulo">Hidratar</text>
+
+        <!-- passo 3 -->
+        <circle cx="500" cy="80" r="48" class="svg_c3"/>
+        <text x="500" y="92" class="svg_numero">3</text>
+        <text x="500" y="165" class="svg_rotulo">Proteger</text>
+      </svg>
+    </section>
+
+    <!-- Tabela de tipos de pele -->
+    <section class="secao" id="tipos-de-pele" aria-labelledby="titulo-tipos">
+      <h2 id="titulo-tipos">Qual é o seu tipo de pele?</h2>
+      <div class="tabela_rolagem">
+        <table class="tabela_cuidados">
+          <caption>Tipos de pele e cuidados indicados</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tipo</th>
+              <th scope="col">Como é</th>
+              <th scope="col">Cuidado indicado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Seca</th>
+              <td>Repuxa e pode descamar</td>
+              <td>Hidratante mais rico e limpeza suave</td>
+            </tr>
+            <tr>
+              <th scope="row">Oleosa</th>
+              <td>Brilho e poros dilatados</td>
+              <td>Gel de limpeza e hidratante leve</td>
+            </tr>
+            <tr>
+              <th scope="row">Mista</th>
+              <td>Oleosa na testa e nariz, seca nas bochechas</td>
+              <td>Produtos leves, hidratando cada área conforme a necessidade</td>
+            </tr>
+            <tr>
+              <th scope="row">Normal</th>
+              <td>Equilibrada, sem excessos</td>
+              <td>Manter limpeza, hidratação e protetor solar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="p_justificado">
+        Em caso de dúvida, procure um dermatologista. Para saber mais, visite o site da
+        <a href="https://www.sbd.org.br" target="_blank" rel="noopener noreferrer" class="link_texto">Sociedade Brasileira de Dermatologia</a>.
+      </p>
+    </section>
+
+    <!-- Vídeo do YouTube -->
+    <section class="secao" id="video" aria-labelledby="titulo-video">
+      <h2 id="titulo-video">Aprenda na prática</h2>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rfktT1iHrLY?si=c7yj0-CucjmPZn94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Dica do dia: funcionalidade em JavaScript que muda o HTML e o CSS -->
+    <section class="secao" id="dica-do-dia" aria-labelledby="titulo-dica">
+      <h2 id="titulo-dica">Dica do dia</h2>
+      <div class="dica" id="caixa-dica">
+        <p class="dica__texto" id="texto-dica" aria-live="polite">Beba bastante água: a pele agradece.</p>
+        <button type="button" class="dica__botao" id="botao-dica">Nova dica</button>
+      </div>
+    </section>
+
+    <!-- Iframe com propaganda minha-->
+    <section class="secao" id="propaganda" aria-labelledby="titulo-propaganda">
+      <h2 id="titulo-propaganda">Oferta para você</h2>
+      <iframe class="propaganda" title="Propaganda Magnólia" loading="lazy"
+        srcdoc="<meta charset='utf-8'><body style='margin:0;font-family:Arial,sans-serif;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#fbeaf2;color:#2f3354'><p style='margin:0;font-size:14px'>Só esta semana</p><p style='margin:4px 0;font-size:34px;font-weight:bold;color:#e0679f'>20% OFF</p><p style='margin:0;font-size:15px'>em toda a linha de skincare Magnólia</p></body>"></iframe>
+    </section>
+
+    <!-- Botão feito com div: bordas arredondadas e cor de fundo -->
+    <section class="secao secao--centro">
+      <div class="botao_div">
+        <a href="produtos.html#skincare">Ver produtos de skincare</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape" id="contato">
+    <div class="rodape__grade">
+
+      <div class="rodape__marca">
+        <a href="index.html" class="rodape__logo" role="img" aria-label="Magnólia"></a>
+        <p>Beleza que começa no cuidado. Produtos pensados para realçar a sua beleza natural.</p>
+      </div>
+
+      <nav class="rodape__coluna" aria-label="Links do rodapé">
+        <h3>Navegue</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="index.html#sobre-a-marca">Sobre nós</a></li>
+          <li><a href="cuidados.html">Cuidados</a></li>
+        </ul>
+      </nav>
+
+      <div class="rodape__coluna">
+        <h3>Contato</h3>
+        <ul>
+          <li><a href="mailto:contato@magnolia.com.br">contato@magnolia.com.br</a></li>
+          <li><a href="tel:+5568999999999">(68) 99999-9999</a></li>
+          <li>Rio Branco, Acre</li>
+        </ul>
+      </div>
+
+      <div class="rodape__coluna">
+        <h3>Siga a Magnólia</h3>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <p class="rodape__copy">© 2026 Magnólia. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/dicas.js"></script>
+</body>
+
+</html>

@@ -1,26 +1,238 @@
+<!--A ideia aqui é fazer um site de empresa de beleza chamada magnólia, que eu inventei para um trabalho de emprendedorismo quando estava no ensino médio. A ideia é fazer um site simples, mas bonito, com uma paleta de cores que remeta a beleza e sofisticação. O site terá uma página inicial com um banner, uma seção sobre a empresa e uma seção de contato.-->
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Magnólia: O melhor para sua beleza</title>
-    <link rel="icon" href="imagem/icon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=block">
-    <link rel="stylesheet" href="css/banner_menu.css">
-  </head>
-  <body>
-    <header class="Menu">
-      <nav class="menu">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magnólia: O melhor para sua beleza</title>
+  <link rel="icon" href="imagem/icon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=block">
+  <!--Nesse ponto ainda não pensei em todos os css, mas, por enquanto farei um separado para cada elemento que acredito precisar de mais atenção ou vou fazer uma coisa diferente, este é para o menu e o banner.-->
+  <link rel="stylesheet" href="css/banner_menu.css">
+  <link rel="stylesheet" href="css/barra_nav.css">
+  <link rel="stylesheet" href="css/mais_vendidos.css">
+  <link rel="stylesheet" href="css/promoção.css">
+  <link rel="stylesheet" href="css/rodape.css">
+  <link rel="stylesheet" href="css/carrossel.css">
+  <link rel="stylesheet" href="css/sobre_marca.css">
+</head>
+
+<body>
+  <header class="Menu">
+    <nav class="menu">
+      <!-- Logo com link para pagina inicial-->
+      <a href="index.html" class="logo" role="img" aria-label="Magnólia"></a>
+      <ul class="links" id="menu-links">
+        <!-- Links do menu -->
+        <!-- O link da página atual tem a classe "ativo" que indica em qual página estamos -->
+        <li><a href="index.html" class="ativo" aria-current="page">Home</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="#sobre-a-marca">Sobre nós</a></li>
+        <li><a href="cuidados.html">Cuidados</a></li>
+      </ul>
+      <a href="perfil.html" class="perfil" role="img" aria-label="Conta"></a>
+
+       <!-- Botão sanduíche: só aparece em telas pequenas -->
+    <button type="button" class="hamburguer" id="botao-menu"
+            aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    </nav>
+  </header>
+  <section class="banner_conteinner">
+    <img class="banner" src="imagem/R (1).png" alt="Banner Magnólia">
+    <!--botão sobre o banner-->
+    <div class="banner__botao">
+    <a href="#mais-vendidos">Ver favoritos</a>
+  </div>
+  </section>
+  <!-- Barra de navegação por categorias "circulos da página"-->
+  <section class="barra_nav">
+    <h2 class="barra_nav__titulo">Categorias</h2>
+    <ul class="barra_nav__lista">
+      <li>
+        <!-- Link para a categoria de skincare dentro da página produtos-->
+        <a href="produtos.html#skincare" class="categoria">
+          <span class="categoria__circulo">
+            <img src="imagem/categorias/skincare.png" alt="">
+          </span>
+          <span class="categoria__nome">Skincare</span>
+        </a>
+      </li>
+      <li>
+        <!-- Link para a categoria de maquiagem dentro da página produtos-->
+        <a href="produtos.html#maquiagem" class="categoria">
+          <span class="categoria__circulo">
+            <img src="imagem/categorias/maquiagem.png" alt="">
+          </span>
+          <span class="categoria__nome">Maquiagem</span>
+        </a>
+      </li>
+      <li>
+        <!-- Link para a categoria de Kits(conjuntos de produtos) dentro da página produtos-->
+        <a href="produtos.html#Kits" class="categoria">
+          <span class="categoria__circulo">
+            <img src="imagem/categorias/Kit.png" alt="">
+          </span>
+          <span class="categoria__nome">Kits</span>
+        </a>
+      </li>
+      <li>
+        <!-- Link para a categoria de cabelos dentro da página produtos-->
+        <a href="produtos.html#cabelos" class="categoria">
+          <span class="categoria__circulo">
+            <img src="imagem/categorias/cabelo.png" alt="">
+          </span>
+          <span class="categoria__nome">Cabelos</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- section mais vendidos-->
+  <section class="mais_vendidos" id="mais-vendidos">
+    <h2 class="mais_vendidos__titulo">Favoritos da Temporada</h2>
+    <div class="mais_vendidos__grade">
+      <!--Cada produto está dentro de um artigo-->
+      <article class="produto">
+        <img src="imagem/produtos/serum.png" alt="Sérum facial Magnólia">
+        <h3 class="produto__nome">Sérum Facial</h3>
+        <p class="produto__preco">R$ 59,90</p>
+        <a href="  " class="produto__botao">Ver produto</a>
+      </article>
+      <article class="produto">
+        <img src="imagem/produtos/creme.png" alt="Creme facial Magnólia">
+        <h3 class="produto__nome">Creme Facial</h3>
+        <p class="produto__preco">R$ 69,90</p>
+        <a href="  " class="produto__botao">Ver produto</a>
+      </article>
+      <article class="produto">
+        <img src="imagem/produtos/sombra.png" alt="Sombra de olhos Magnólia">
+        <h3 class="produto__nome">Paleta de Sombra</h3>
+        <p class="produto__preco">R$ 90,90</p>
+        <a href="  " class="produto__botao">Ver produto</a>
+      </article>
+      <article class="produto">
+        <img src="imagem/produtos/kit2.png" alt="Kit de cuidados com a pele Magnólia">
+        <h3 class="produto__nome">Kit de Cuidados</h3>
+        <p class="produto__preco">R$ 129,90</p>
+        <a href="  " class="produto__botao">Ver produto</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Carrossel de promoções: 3 slides, navegação por botões e bolinhas -->
+  <section class="carrossel" id="carrossel" aria-label="Promoções">
+    <div class="carrossel__janela">
+
+      <!-- Faixa com os slides lado a lado; o JS desliza esta faixa -->
+      <div class="carrossel__faixa" id="carrossel-faixa">
+        <div class="carrossel__slide">
+          <img src="imagem/carrossel/promo1.png" alt="Promoção de primavera: 20% de desconto em skincare">
+        </div>
+        <div class="carrossel__slide">
+          <img src="imagem/carrossel/promo2.png"
+            alt="Promoção de primeira compra: 20% de desconto em todos os produtos">
+        </div>
+        <div class="carrossel__slide">
+          <img src="imagem/carrossel/promo3.png" alt="Presenteie quem você ama com a coleção de maquiagem completa!">
+        </div>
+      </div>
+
+      <!-- Botões anterior / próximo -->
+      <button type="button" class="carrossel__botao carrossel__botao--anterior" id="carrossel-anterior"
+        aria-label="Slide anterior">&#10094;</button>
+      <button type="button" class="carrossel__botao carrossel__botao--proximo" id="carrossel-proximo"
+        aria-label="Próximo slide">&#10095;</button>
+    </div>
+
+    <!-- Bolinhas indicando o slide atual -->
+    <div class="carrossel__bolinhas" id="carrossel-bolinhas"></div>
+  </section>
+
+  <!-- Seção sobre a marca-->
+  <section class="sobre_marca" id="sobre-a-marca" aria-labelledby="sobre-titulo">
+    <h2 class="sobre_marca__titulo">Conheça a Magnólia</h2>
+    <div class="sobre_marca__grade">
+      <!-- figure/figcaption -->
+      <figure class="sobre_marca__foto">
+        <img src="imagem/loja.png" alt="Fachada e interior da loja Magnólia">
+        <figcaption>Nossa loja em Rio Branco, Acre</figcaption>
+      </figure>
+
+      <div class="sobre_marca__texto">
+        <h3 id="sobre-titulo" class="sobre_marca__titulo2">Nossa história</h2>
+        <p class="sobre_marca__historia">
+          A Magnólia nasceu de uma ideia simples: <strong>cuidar da pele é um ato de carinho</strong>.
+          Começamos como um pequeno projeto e hoje reunimos skincare, maquiagem e kits
+          pensados para <em>realçar a beleza natural</em> de cada pessoa.
+        </p>
+
+        <h3 class="sobre_marca__subtitulo">Nosso objetivo</h3>
+        <p class="sobre_marca__objetivo">
+          Oferecer produtos de qualidade e acessíveis, que fazem bem à pele e à autoestima.
+        </p>
+
+        <!-- Lista de valores da marca -->
+        <ul class="sobre_marca__valores">
+          <li>Ingredientes que cuidam</li>
+          <li>Beleza para todas as peles</li>
+          <li>Atendimento próximo e acolhedor</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Rodapé do site -->
+  <footer class="rodape" id="contato">
+    <div class="rodape__grade">
+
+      <!-- Coluna 1: marca -->
+      <div class="rodape__marca">
+        <a href="index.html" class="rodape__logo" role="img" aria-label="Magnólia"></a>
+        <p>Beleza que começa no cuidado. Produtos pensados para realçar a sua beleza natural.</p>
+      </div>
+
+      <!-- Coluna 2: navegação -->
+      <nav class="rodape__coluna" aria-label="Links do rodapé">
+        <h3>Navegue</h3>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><img class="banner" src="" alt="logo magnólia"></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre nós</a></li>
+          <li><a href="cuidados.html">Cuidados</a></li>
         </ul>
       </nav>
-    </header>
-    <section class="banner_conteinner">
-    <img class="banner" src="imagem/R.png" alt="Banner Magnólia">
-    </section>
-  </body>
+
+      <!-- Coluna 3: contato -->
+      <div class="rodape__coluna">
+        <h3>Contato</h3>
+        <ul>
+          <li><a href="mailto:contato@magnolia.com.br">contato@magnolia.com.br</a></li>
+          <li><a href="tel:+5568999999999">(68) 99999-9999</a></li>
+          <li>Rio Branco, Acre</li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: redes sociais (links externos) -->
+      <div class="rodape__coluna">
+        <h3>Siga a Magnólia</h3>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- Linha de direitos autorais -->
+    <p class="rodape__copy">© 2026 Magnólia. Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/carrossel.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+
 </html>

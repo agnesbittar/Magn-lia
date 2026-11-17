@@ -1,0 +1,64 @@
+.mais_vendidos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.mais_vendidos__titulo {
+    margin: 0 0 32px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2f3354;
+}
+
+.mais_vendidos__grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.produto {
+    padding: 16px;
+    border-radius: 14px;
+    background-color: #fff;
+    border: 3px solid transparent;          /* borda invisível, que o hover colore */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.produto:hover,
+.produto:focus-within {
+    border-color: #e0679f;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(224, 103, 159, 0.25);
+}
+
+.produto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produto__nome {
+    margin: 12px 0 4px;
+    font-size: 16px;
+}
+
+.produto__preco {
+    margin: 0 0 12px;
+    color: #e0679f;
+    font-weight: 600;
+}
+
+.produto__botao {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #e0679f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}

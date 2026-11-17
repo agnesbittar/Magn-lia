@@ -1,0 +1,303 @@
+/* Página de cuidados */
+
+body {
+    background-color: #f7f1f4;
+}
+
+/* conteúdo centralizado, com bordas verticais no computador */
+.conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 24px;
+    background-color: #fff;
+    border-left: 2px solid #f0d9e4;
+    border-right: 2px solid #f0d9e4;
+}
+
+.cabecalho_pagina {
+    padding: 48px 0 16px;
+    text-align: center;
+}
+
+.cabecalho_pagina h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+    font-weight: 600;
+    color: #2f3354;
+}
+
+.secao {
+    padding: 28px 0;
+}
+
+.secao::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.secao--centro {
+    text-align: center;
+}
+
+.secao h2 {
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #e0679f;
+    font-size: 26px;
+    font-weight: 600;
+    color: #2f3354;
+}
+
+.secao h3 { margin: 20px 0 6px; font-size: 21px; color: #e0679f; }
+.secao h4 { margin: 16px 0 6px; font-size: 18px; color: #2f3354; }
+.secao h5 { margin: 14px 0 4px; font-size: 16px; color: #e0679f; }
+.secao h6 { margin: 14px 0 4px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #6b6e88; }
+
+
+.p_destaque {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-style: italic;
+    text-align: center;
+    color: #e0679f;
+}
+
+.p_justificado {
+    margin: 0 0 12px;
+    text-align: justify;
+    color: #2f3354;
+}
+
+.p_nota {
+    margin: 0;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: #fbeaf2;
+    font-weight: 700;
+    text-align: right;
+    color: #b0316d;
+}
+
+/* link no texto com formatação diferente do padrão */
+.link_texto {
+    color: #e0679f;
+    font-weight: 600;
+    text-decoration: underline wavy;
+    text-underline-offset: 4px;
+}
+
+.link_texto:hover {
+    color: #2f3354;
+}
+
+/* float: a figura flutua à esquerda e o texto contorna */
+.figura_flutuante {
+    float: left;
+    width: 240px;
+    margin: 0 28px 12px 0;
+}
+
+.figura_flutuante img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(47, 51, 84, 0.15);
+}
+
+.figura_flutuante figcaption {
+    margin-top: 6px;
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    color: #6b6e88;
+}
+
+.lista_passos {
+    margin: 0 0 12px;
+    padding-left: 24px;
+    color: #2f3354;
+}
+
+.lista_passos li::marker {
+    color: #e0679f;
+    font-weight: 700;
+}
+
+/* SVG dos 3 passos */
+.grafico_passos {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.svg_linha   { stroke: #f0b6cf; stroke-width: 4; stroke-dasharray: 8 8; }
+.svg_c1      { fill: #e0679f; }
+.svg_c2      { fill: #2f3354; }
+.svg_c3      { fill: #f4a9c9; }
+.svg_numero  { fill: #fff; font: 700 40px "Montserrat", sans-serif; text-anchor: middle; }
+.svg_rotulo  { fill: #2f3354; font: 600 22px "Montserrat", sans-serif; text-anchor: middle; }
+
+/* tabela */
+.tabela_rolagem {
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+.tabela_cuidados {
+    width: 100%;
+    border-collapse: collapse;
+    color: #2f3354;
+}
+
+.tabela_cuidados caption {
+    margin-bottom: 8px;
+    font-style: italic;
+    text-align: left;
+    color: #6b6e88;
+}
+
+.tabela_cuidados th,
+.tabela_cuidados td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #f0d9e4;
+}
+
+.tabela_cuidados thead th {
+    background-color: #2f3354;
+    color: #fff;
+    border-bottom: none;
+}
+
+.tabela_cuidados tbody th {
+    color: #e0679f;
+}
+
+.tabela_cuidados tbody tr:hover {
+    background-color: #fbeaf2;
+}
+
+/* vídeo responsivo 16:9 */
+.video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #2f3354;
+}
+
+.video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* dica do dia */
+.dica {
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #fbeaf2;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* classe adicionada e removida pelo JavaScript */
+.dica.alternada {
+    background-color: #e9ebf7;
+}
+
+.dica__texto {
+    margin: 0 0 16px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #2f3354;
+}
+
+.dica__botao {
+    padding: 10px 28px;
+    border: none;
+    border-radius: 24px;
+    background-color: #e0679f;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dica__botao:hover,
+.dica__botao:focus-visible {
+    background-color: #2f3354;
+}
+
+/* iframe da propaganda */
+.propaganda {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 180px;
+    margin: 0 auto;
+    border: 2px dashed #e0679f;
+    border-radius: 16px;
+}
+
+/* botão feito com div */
+.botao_div {
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #e0679f;
+    box-shadow: 0 6px 14px rgba(224, 103, 159, 0.35);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao_div a {
+    display: block;
+    padding: 14px 36px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.botao_div:hover,
+.botao_div:focus-within {
+    background-color: #2f3354;
+    transform: translateY(-2px);
+}
+
+/* tablet e celular: sem bordas laterais, float desligado */
+@media (max-width: 1100px) {
+    .conteudo {
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .conteudo {
+        padding: 0 16px 16px;
+    }
+
+    .cabecalho_pagina h1 {
+        font-size: 28px;
+    }
+
+    .figura_flutuante {
+        float: none;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 16px;
+    }
+
+    .p_destaque {
+        font-size: 18px;
+    }
+}

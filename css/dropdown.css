@@ -1,0 +1,76 @@
+/* Dropdown do menu (item com submenu) */
+
+.dropdown {
+    position: relative;
+}
+
+.menu .links .seta {
+    font-size: 12px;
+}
+
+.dropdown__menu {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+    z-index: 30;
+
+    /* escondido por padrão */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+}
+
+/* aparece no hover e também pelo teclado (Tab) */
+.dropdown:hover .dropdown__menu,
+.dropdown:focus-within .dropdown__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu .links .dropdown__menu a {
+    padding: 10px 20px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.menu .links .dropdown__menu a:hover {
+    background-color: #fbeaf2;
+}
+
+/* o sublinhado rosa do menu não é usado dentro do submenu */
+.menu .links .dropdown__menu a::after {
+    display: none;
+}
+
+/* celular: o submenu aparece dentro do painel do menu sanduíche */
+@media (max-width: 768px) {
+    .dropdown__menu {
+        position: static;
+        min-width: 0;
+        padding: 0 0 8px 16px;
+        box-shadow: none;
+        background-color: transparent;
+        opacity: 1;
+        visibility: inherit;   /* acompanha o painel: aberto ou fechado */
+        transform: none;
+    }
+
+    .menu .links .dropdown__menu li {
+        border-bottom: none;
+    }
+
+    .menu .links .dropdown__menu a {
+        padding: 8px 0;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

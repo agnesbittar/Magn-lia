@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos | Magnólia</title>
+  <link rel="icon" href="imagem/icon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=block">
+  <link rel="stylesheet" href="css/banner_menu.css">
+  <link rel="stylesheet" href="css/barra_nav.css">
+  <link rel="stylesheet" href="css/mais_vendidos.css">
+  <link rel="stylesheet" href="css/rodape.css">
+  <link rel="stylesheet" href="css/produtos.css">
+</head>
+
+<body>
+  <header class="Menu">
+    <nav class="menu">
+      <!-- Logo com link para a página inicial -->
+      <a href="index.html" class="logo" role="img" aria-label="Magnólia"></a>
+      <ul class="links" id="menu-links">
+        <!-- Nesta página, o link ativo é o de Produtos -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="produtos.html" class="ativo" aria-current="page">Produtos</a></li>
+        <li><a href="index.html#sobre-a-marca">Sobre nós</a></li>
+        <li><a href="cuidados.html">Cuidados</a></li>
+      </ul>
+      <a href="perfil.html" class="perfil" role="img" aria-label="Conta"></a>
+
+      <!-- Botão sanduíche: só aparece em telas pequenas -->
+      <button type="button" class="hamburguer" id="botao-menu" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="menu-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Título da página (h1) -->
+    <section class="produtos_topo">
+      <h1 class="produtos_topo__titulo">Nossos produtos</h1>
+      <p class="produtos_topo__texto">Escolha uma categoria e descubra o cuidado que a sua beleza merece.</p>
+    </section>
+
+    <!-- Barra de categorias (a mesma da página inicial): os links rolam até cada seção desta página -->
+    <section class="barra_nav">
+      <ul class="barra_nav__lista">
+        <li>
+          <a href="#skincare" class="categoria">
+            <span class="categoria__circulo">
+              <img src="imagem/categorias/skincare.png" alt="">
+            </span>
+            <span class="categoria__nome">Skincare</span>
+          </a>
+        </li>
+        <li>
+          <a href="#maquiagem" class="categoria">
+            <span class="categoria__circulo">
+              <img src="imagem/categorias/maquiagem.png" alt="">
+            </span>
+            <span class="categoria__nome">Maquiagem</span>
+          </a>
+        </li>
+        <li>
+          <a href="#kits" class="categoria">
+            <span class="categoria__circulo">
+              <img src="imagem/categorias/Kit.png" alt="">
+            </span>
+            <span class="categoria__nome">Kits</span>
+          </a>
+        </li>
+        <li>
+          <a href="#cabelos" class="categoria">
+            <span class="categoria__circulo">
+              <img src="imagem/categorias/cabelo.png" alt="">
+            </span>
+            <span class="categoria__nome">Cabelos</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Categoria: Skincare -->
+    <section class="secao_produtos" id="skincare" aria-labelledby="titulo-skincare">
+      <h2 class="secao_produtos__titulo" id="titulo-skincare">Skincare</h2>
+      <div class="mais_vendidos__grade">
+        <article class="produto">
+          <img src="imagem/produtos/serum.png" alt="Sérum facial Magnólia">
+          <h3 class="produto__nome">Sérum Facial</h3>
+          <p class="produto__preco">R$ 59,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+        <article class="produto">
+          <img src="imagem/produtos/creme.png" alt="Creme facial Magnólia">
+          <h3 class="produto__nome">Creme Facial</h3>
+          <p class="produto__preco">R$ 69,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+        <article class="produto">
+          <img src="imagem/produtos/limpeza.png" alt="Gel de limpeza facial Magnólia">
+          <h3 class="produto__nome">Gel de Limpeza</h3>
+          <p class="produto__preco">R$ 39,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Categoria: Maquiagem -->
+    <section class="secao_produtos" id="maquiagem" aria-labelledby="titulo-maquiagem">
+      <h2 class="secao_produtos__titulo" id="titulo-maquiagem">Maquiagem</h2>
+      <div class="mais_vendidos__grade">
+        <article class="produto">
+          <img src="imagem/produtos/sombra.png" alt="Paleta de sombras Magnólia">
+          <h3 class="produto__nome">Paleta de Sombra</h3>
+          <p class="produto__preco">R$ 90,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+        <article class="produto">
+          <img src="imagem/produtos/batom.png" alt="Batom Magnólia">
+          <h3 class="produto__nome">Batom Cremoso</h3>
+          <p class="produto__preco">R$ 49,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+        <article class="produto">
+          <img src="imagem/produtos/base.png" alt="Base líquida Magnólia">
+          <h3 class="produto__nome">Base Líquida</h3>
+          <p class="produto__preco">R$ 79,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Categoria: Kits -->
+    <section class="secao_produtos" id="kits" aria-labelledby="titulo-kits">
+      <h2 class="secao_produtos__titulo" id="titulo-kits">Kits</h2>
+      <div class="mais_vendidos__grade">
+        <article class="produto">
+          <img src="imagem/produtos/kit2.png" alt="Kit de cuidados com a pele Magnólia">
+          <h3 class="produto__nome">Kit de Cuidados</h3>
+          <p class="produto__preco">R$ 129,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+        <article class="produto">
+          <img src="imagem/produtos/kit1.png" alt="Kit presente Magnólia">
+          <h3 class="produto__nome">Kit Presente</h3>
+          <p class="produto__preco">R$ 159,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Categoria: Cabelos -->
+    <section class="secao_produtos" id="cabelos" aria-labelledby="titulo-cabelos">
+      <h2 class="secao_produtos__titulo" id="titulo-cabelos">Cabelos</h2>
+      <div class="mais_vendidos__grade">
+        <article class="produto">
+          <img src="imagem/produtos/13.png" alt="Shampoo Magnólia">
+          <h3 class="produto__nome">Shampoo Nutritivo</h3>
+          <p class="produto__preco">R$ 44,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+        <article class="produto">
+          <img src="imagem/produtos/14.png" alt="Máscara capilar Magnólia">
+          <h3 class="produto__nome">Máscara Capilar</h3>
+          <p class="produto__preco">R$ 59,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+        <article class="produto">
+          <img src="imagem/produtos/15.png" alt="Leave-in Magnólia">
+          <h3 class="produto__nome">Leave-in</h3>
+          <p class="produto__preco">R$ 49,90</p>
+          <a href="  " class="produto__botao">Ver produto</a>
+        </article>
+      </div>
+    </section>
+    <!-- Tabela de preços para revendedores -->
+    <section class="secao_produtos" id="tabela-revendedores" aria-labelledby="titulo-tabela">
+      <h2 class="secao_produtos__titulo" id="titulo-tabela">Tabela de preços para revendedores</h2>
+      <p class="tabela_aviso">Revendedores têm <strong>30% de desconto</strong> sobre o preço de venda. Pedido mínimo de
+        <em>10 unidades</em> por produto.</p>
+      <div class="tabela_rolagem">
+        <table class="tabela_precos">
+          <caption>Preço de venda e preço de revenda por unidade</caption>
+          <thead>
+            <tr>
+              <th scope="col">Produto</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Preço de venda</th>
+              <th scope="col">Preço revendedor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sérum Facial</td>
+              <td>Skincare</td>
+              <td>R$ 59,90</td>
+              <td>R$ 41,93</td>
+            </tr>
+            <tr>
+              <td>Creme Facial</td>
+              <td>Skincare</td>
+              <td>R$ 69,90</td>
+              <td>R$ 48,93</td>
+            </tr>
+            <tr>
+              <td>Gel de Limpeza</td>
+              <td>Skincare</td>
+              <td>R$ 39,90</td>
+              <td>R$ 27,93</td>
+            </tr>
+            <tr>
+              <td>Paleta de Sombra</td>
+              <td>Maquiagem</td>
+              <td>R$ 90,90</td>
+              <td>R$ 63,63</td>
+            </tr>
+            <tr>
+              <td>Batom Cremoso</td>
+              <td>Maquiagem</td>
+              <td>R$ 49,90</td>
+              <td>R$ 34,93</td>
+            </tr>
+            <tr>
+              <td>Base Líquida</td>
+              <td>Maquiagem</td>
+              <td>R$ 79,90</td>
+              <td>R$ 55,93</td>
+            </tr>
+            <tr>
+              <td>Kit de Cuidados</td>
+              <td>Kits</td>
+              <td>R$ 129,90</td>
+              <td>R$ 90,93</td>
+            </tr>
+            <tr>
+              <td>Kit Presente</td>
+              <td>Kits</td>
+              <td>R$ 159,90</td>
+              <td>R$ 111,93</td>
+            </tr>
+            <tr>
+              <td>Shampoo Nutritivo</td>
+              <td>Cabelos</td>
+              <td>R$ 44,90</td>
+              <td>R$ 31,43</td>
+            </tr>
+            <tr>
+              <td>Máscara Capilar</td>
+              <td>Cabelos</td>
+              <td>R$ 59,90</td>
+              <td>R$ 41,93</td>
+            </tr>
+            <tr>
+              <td>Leave-in</td>
+              <td>Cabelos</td>
+              <td>R$ 49,90</td>
+              <td>R$ 34,93</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer class="rodape" id="contato">
+    <div class="rodape__grade">
+
+      <div class="rodape__marca">
+        <a href="index.html" class="rodape__logo" role="img" aria-label="Magnólia"></a>
+        <p>Beleza que começa no cuidado. Produtos pensados para realçar a sua beleza natural.</p>
+      </div>
+
+      <nav class="rodape__coluna" aria-label="Links do rodapé">
+        <h3>Navegue</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="index.html#sobre-a-marca">Sobre nós</a></li>
+          <li><a href="cuidados.html">Cuidados</a></li>
+        </ul>
+      </nav>
+
+      <div class="rodape__coluna">
+        <h3>Contato</h3>
+        <ul>
+          <li><a href="mailto:contato@magnolia.com.br">contato@magnolia.com.br</a></li>
+          <li><a href="tel:+5568999999999">(68) 99999-9999</a></li>
+          <li>Rio Branco, Acre</li>
+        </ul>
+      </div>
+
+      <div class="rodape__coluna">
+        <h3>Siga a Magnólia</h3>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <p class="rodape__copy">© 2026 Magnólia. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+
+</html>
